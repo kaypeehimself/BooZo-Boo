@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boozo&BooBoo &#128143;</title>
+    <meta name="description" content="**Lovebirds Forever** &#128143; Welcome to Lovebirds Forever, a heartwarming website dedicated to celebrating the unbreakable bond between two inseparable lovebirds. Here, you'll find captivating stories, beautiful photos, and inspiring quotes that showcase the enduring connection and unwavering devotion of these feathered soulmates. Join us in exploring the magical world of lovebirds and discover why their love is truly everlasting.">
+    <style>
+        body {
+            background-image: url('BooBoo.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            width: 30%;
+            background-color: rgba(255, 255, 255, 0.7); /* Light background with opacity */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .box h2, .box h1 {
+            margin-top: 0;
+        }
+        .box:nth-child(2) {
+            background-color: rgba(255, 182, 193, 0.7); /* Lighter pink */
+        }
+        .box:nth-child(3) {
+            background-color: rgba(135, 206, 250, 0.7); /* Lighter blue */
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            padding-top: 20px;
+        }
+        .slides {
+            display: none;
+        }
+        .slide-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>About the 2 Lovebirds</h1>
+            <p>Kaypee and Ntsako initially met around April 2024 and they clicked from the get-go. Unfortunately, the couple split due to an unspoken incident. They then got back together in May of 2024 and Kaypee officially asked Ntsako to be his girlfriend on the 18th of May. These two have been through a lot together ever since that and have been going strong.</p>
+        </div>
+        <div class="box">
+            <h2>Ntsako</h2>
+            <p>Ntsako Keitumetse Baloyi, known as BooBoo, is the princess in the relationship. Born on March 31st, 2005, anything she wants, she gets. She is very protective and possessive over her man. She is the kindest, most genuine, and most down-to-earth person known. She's not only pretty but comes with a good personality. Kaypee describes her as the "perfect" girlfriend. Even though she is an angel, she is not to be tested because she can change into Lucifer once triggered.</p>
+        </div>
+        <div class="box">
+            <h2>Kaypee</h2>
+            <p>Kind-hearted and handsome,Funny and charming,Caring, thoughtful, Witty,intelligent, Genuine and loyal is what Ntsako describes Kaypee as. He's humble guy who doesn't get fazed by things. His has one loyal friend and doesnt really open up to people that easily.</p>
+        </div>
+    </div>
+    <div class="slideshow-container">
+        <div class="slides">
+            <img src="img.jpg" class="slide-img" alt="Image 1">
+        </div>
+        <div class="slides">
+            <img src="img1.jpg" class="slide-img" alt="Image 2">
+        </div>
+        <div class="slides">
+            <img src="img7.jpg" class="slide-img" alt="Image 3">
+        </div>
+        <div class="slides">
+            <img src="img3.jpg" class="slide-img" alt="Image 4">
+        </div>
+        <div class="slides">
+            <img src="img4.jpg" class="slide-img" alt="Image 5">
+        </div>
+        <div class="slides">
+            <img src="img5.jpg" class="slide-img" alt="Image 6">
+        </div>
+        <div class="slides">
+            <img src="img6.jpg" class="slide-img" alt="Image 7">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
